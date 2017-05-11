@@ -1,0 +1,17 @@
+name: msnake
+version: '2.0'
+summary: A simple snake game
+description: A simple snake game written in C using the ncurses library. By Mogria and Timo Furrer
+confinement: strict
+grade: stable
+
+parts:
+    msnake:
+        plugin: cmake
+        source: https://github.com/mogria/msnake.git
+        source-type: git
+        build-packages: [cmake, build-essential, libncurses5, libncurses5-dev]
+
+apps:
+    msnake:
+        command: bin/msnake
